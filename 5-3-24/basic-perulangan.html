@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var namasiswa = prompt("Siapa namamu ?");
+            var studentWish = prompt("mau masuk universitas gaa?");
+
+            if (studentWish === "mau") {
+                var nilaistudent = prompt("berapa nilai akhir kamu ?");
+
+                if (nilaistudent < 30) {
+                    alert("tidak mungkin masuk univ");
+                } else {
+                    var chanceGetUniv = Math.random() * 100;
+                    chanceGetUniv = Math.floor(chanceGetUniv);
+
+                    alert("hmmm, kemungkinan kamu masuk univ adalah" + chanceGetUniv + "%");
+
+                    if (nilaistudent < 50) {
+                        if (chanceGetUniv < 50) {
+                            alert(" hmm, kemungkinan kamu " + namasiswa + " kecil masuk universitas");
+
+                        } else {
+                            alert("kemungkinan kamu " + namasiswa + " bisa masuk universitas");
+                        }
+                    } else if (chanceGetUniv > 70 && nilaistudent > 60) {
+                        alert("hei " + namasiswa + " pasti kamu masuk dengan nilai SMA " + nilaistudent + " mu yang besar itu");
+                    } else if (chanceGetUniv > 70 || nilaistudent > 80) {
+                        alert("hei " + namasiswa + " pasti kamu masuk dengan nilai SMA " + nilaistudent + " mu yang besar itu");
+                    }
+                }
+            } else {
+                alert("okedeh terserah lu !");
+            }
+    </script>
+</body>
+</html>
